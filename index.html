@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="assets/style/normalize.css">
+    <link rel="stylesheet" href="assets/style/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="calc-block">
+            <div class="calc-header">
+                <h1>Калькулятор стоимости авто</h1>
+            </div>
+            <div class="calc-body">
+                <label for="brand"> Марка автомобиля:</label>
+                <div class="calc-item brand">
+                    <select name="brand" id="characteristic">
+                        <option name="brandmassive" value="10000">Audi</option>
+                        <option name="brandmassive" value="5000">Kia</option>
+                        <option name="brandmassive" value="15000">Nissan</option>
+                    </select>
+                </div>
+                <label for="fuelblock">Топливо:</label>
+                <div class="calc-item fuel" id="fuelblock">
+                    <label for="petrol">
+                        <input type="radio" name="fuel" value="500" id="petrol">
+                        Бензин
+                    </label>
+                    <label for="diesel">
+                        <input type="radio" name="fuel" value="1000" id="diesel">
+                        Дизельное топливо
+                    </label>
+                    <label for="electro">
+                        <input type="radio" name="fuel" value="1500" id="electro">
+                        Электрический
+                    </label>
+                </div>
+                <label for="yearblock">Возраст автомобиля:</label>
+                <div class="calc-item period" id="yearblock">
+                    <label for="3year">
+                        <input name="age" type="radio" value="2000" id="3year">
+                        Меньше 3 лет
+                    </label>
+                    <label for="3-5year">
+                        <input name="age" type="radio" value="1500" id="3-5year">
+                        От 3 до 5 лет
+                    </label>
+                    <label for="5-7year">
+                        <input name="age" type="radio" value="1000" id="5-7year">
+                        От 5 до 7 лет
+                    </label>
+                    <label for="7year">
+                        <input name="age" type="radio" value="500" id="7year">
+                        Больше 7 лет
+                    </label>
+                </div>
+                <button id="btn">Рассчитать</button>
+                <p class="calc-item">Сумма:</p>
+                <div class="calc-item result" id="sumResult"></div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>
