@@ -11,7 +11,7 @@ let result = 0;
 function isItSelected() {
     for (let i = 0; i < massiveBrand.length; i++){
         if(massiveBrand[i].selected) {
-            sumMassive.push(+massiveBrand[i].value);
+            sumMassive[0] = +massiveBrand[i].value;
         } else continue
         console.log(sumMassive);
     }
@@ -20,7 +20,7 @@ function isItSelected() {
 function isItCheckedFuel() {
     for (let i = 0; i < massiveFuel.length; i++){
         if(massiveFuel[i].checked) {
-            sumMassive.push(+massiveFuel[i].value);
+            sumMassive[1] = +massiveFuel[i].value;
         } else continue
         console.log(sumMassive);
     }
@@ -29,13 +29,14 @@ function isItCheckedFuel() {
 function isItCheckedAge() {
     for (let i = 0; i < massiveAge.length; i++){
         if(massiveAge[i].checked) {
-            sumMassive.push(+massiveAge[i].value);
+            sumMassive[2] = +massiveAge[i].value;
         } else continue
         console.log(sumMassive);
     }
 }
 // подсчет итоговой суммы
 function getSumNumber() {
+    result = 0;
     for (let i = 0; i < sumMassive.length; i++) {
         result += sumMassive[i];
         console.log(result);
@@ -44,7 +45,6 @@ function getSumNumber() {
 }
 
 button.addEventListener('click', function () {
-    sumMassive.length = 0; // почему не получается очистить массив от предыдущих значений? 
     isItSelected();
     isItCheckedFuel();
     isItCheckedAge();
